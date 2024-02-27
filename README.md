@@ -47,21 +47,27 @@
 
 #### :bar_chart: Benchmarks
 
-```sh
-$ zig build bench -- -s
-Elapsed time: 151.215ms
-```
+- Speed: the time the algorithm needs to find the node the given key belongs to.
 
-```sh
-$ zig build bench -- -b
-Load balance: 7.84
-```
+    ```sh
+    $ zig build bench -- -s
+    Elapsed time: 151.215ms
+    ```
 
-```sh
-$ zig build bench -- -m
-Number of misplaced keys after removal: 0.00%
-Number of misplaced keys after restoring: 0.00%
-```
+- Balance: the ability of the algorithm to spread the keys evenly across the cluster nodes.
+
+    ```sh
+    $ zig build bench -- -b
+    Load balance: 7.84
+    ```
+
+- Monotonicity: the ability of the algorithm to move the minimum amount of resources when the cluster scales.
+
+    ```sh
+    $ zig build bench -- -m
+    Number of misplaced keys after removal: 0.00%
+    Number of misplaced keys after restoring: 0.00%
+    ```
 
 <!-- MARKDOWN LINKS -->
 
