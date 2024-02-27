@@ -48,9 +48,17 @@
 #### :bar_chart: Benchmarks
 
 ```sh
-$ zig build bench
-Elapsed time: 151.562ms
-Load balance: 8.82
+$ zig build bench -- -s
+Elapsed time: 151.215ms
+```
+
+```sh
+$ zig build bench -- -b
+Load balance: 7.84
+```
+
+```sh
+$ zig build bench -- -m
 Number of misplaced keys after removal: 0.00%
 Number of misplaced keys after restoring: 0.00%
 ```
